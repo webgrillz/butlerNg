@@ -1,0 +1,72 @@
+<% include partials/head %>
+	<% include partials/nav %>
+
+<!-- Main -->
+				<article id="main">
+
+					<header class="special container">
+						<span class="icon fa-envelope"></span>
+						<h2>Register</h2>
+						<p>Use the form below to register.</p>
+						 <!-- show any messages that come back with authentication -->
+							<% if (message.length > 0) { %>
+								<div class="alert alert-danger"><p><%= message %></p></div>
+							<% } %>
+						<p><span style="color: red;"></span></p>
+					</header>
+
+					<!-- One -->
+						<section class="wrapper style4 special container 75%">
+
+							<!-- Content -->
+								<div class="content">
+									<form method="post" action="/users/signup">
+										<div class="row 50%">
+											<div class="6u 12u(mobile)">
+												<input type="text" name="firstname" placeholder="First Name" />
+											</div>
+											
+											<div class="6u 12u(mobile)">
+												<input type="text" name="lastname" placeholder="Last Name"  />
+											</div>
+										</div>
+										<div class="row 50%">
+											<div class="4u 12u(mobile)">
+												<input type="email" name="email" placeholder="Email Address" />
+											</div>
+											<div class="4u 12u(mobile)">
+												<input type="password" name="password" placeholder="Password"  />
+											</div>
+										
+										
+										<div class="4u 12u(mobile)">
+												<input type="password" name="confirm_password" placeholder="Confirm Password" "/>
+											</div>
+										</div>
+										<div class="row 50%">
+											<div class="6u 12u(mobile)">
+												<input type="text" name="address" placeholder="Address" />
+											</div>
+											<div class="3u 12u(mobile)">
+												<input type="text" name="phone" placeholder="Home Phone No" />
+											</div>
+											<div class="3u 12u(mobile)">
+												<input type="text" name="phone_2" maxlength="14" placeholder="Office Phone No" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="12u">
+											<div class="12u">
+												<ul class="buttons">
+													<li><input type="submit" class="special" value="Register" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</div>
+
+						</section>
+
+				</article>
+
+<% include partials/footer %>
